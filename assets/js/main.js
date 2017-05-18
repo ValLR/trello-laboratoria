@@ -76,13 +76,6 @@ function imprimir(){
 
 
 
-
-/*es fijo debiese estar en html, pero whatevs, textarea desde js
-var container= document.getElementById("boxdos");
-var textArea=document.createElement("textarea");
-//luego tengo que indicarle dónde va
-//puedo pasarle atributos
-textArea.setAttribute("placeholder","agrega texto aquí");
 textArea.classList.add("text");
 container.appendChild(textArea);
 
@@ -96,5 +89,3 @@ function agregar(){
 	contienelista.appendChild(listado);
 
 }
-
-//kill your CHILD -->removeElement*/
