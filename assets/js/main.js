@@ -45,6 +45,7 @@ function tarjetas(){
 	enlace.remove(inputContainer);
 
 	textArea.setAttribute("placeholder", "Escribe tu tarea aquí");
+	textArea.setAttribute("id", "tareas")
 	var container = document.getElementById("input-box")
 	container.appendChild(textArea);
 
@@ -61,12 +62,12 @@ function tarjetas(){
 }
 
 function imprimir(){
-	var text =textArea.value;//rescato el valor de mi txtarea
-	var contienelista= document.getElementById("box");	
-	var listado=document.createElement("li");
-	var lista= document.createTextNode(text);//tambien para pasar un texto
+	var tareas = document.getElementById("tareas").value;
+	var contiene= document.getElementById("print-area");	
+	var listado = document.createElement("li");
+	var lista = document.createTextNode(tareas);
 	listado.appendChild(lista);
-	contienelista.appendChild(listado);
+	contiene.appendChild(listado);
 }
 
 
@@ -74,7 +75,7 @@ function imprimir(){
 
 
 
-es fijo debiese estar en html, pero whatevs, textarea desde js
+/*es fijo debiese estar en html, pero whatevs, textarea desde js
 var container= document.getElementById("boxdos");
 var textArea=document.createElement("textarea");
 //luego tengo que indicarle dónde va
