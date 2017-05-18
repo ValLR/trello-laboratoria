@@ -1,20 +1,29 @@
 function borrar(){
-var parent = document.getElementById("input-box");
-var child = document.getElementById("input-lista");
-parent.removeChild(child);
+	var parent = document.getElementById("input-box");
+	var child = document.getElementById("input-lista");
+	var container = document.getElementById("input-box");
+	var textArea = document.createElement("textarea");
+
+	parent.removeChild(child);
+
+	textArea.setAttribute("placeholder","Añadir una lista");
+	textArea.setAttribute("id","fresh-list");
+	textArea.classList.add("text");
+	container.appendChild(textArea);
+
+	var buttonContainer = document.getElementById("button-area");
+	var button = document.createElement("button");
+
+	button.setAttribute("id","boton");
+	button.setAttribute("name", "guardar");
+	button.innerHTML = "Guardar";
+	buttonContainer.appendChild(button);
 }
 
-function refreshBox(){
-var container = document.getElementById("input-box");
-var textArea = docuement.createElement("textarea");
-
-textArea.setAttribute("placeholder","Añadir una lista");
-}
-
-<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
 
 
-//es fijo debiese estar en html, pero whatevs, textarea desde js
+
+/*/es fijo debiese estar en html, pero whatevs, textarea desde js
 var container= document.getElementById("boxdos");
 var textArea=document.createElement("textarea");
 //luego tengo que indicarle dónde va
