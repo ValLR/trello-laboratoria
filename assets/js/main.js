@@ -5,8 +5,9 @@ function borrar(){
 
 	inputContainer.removeChild(input);
 
-	textArea.setAttribute("placeholder","Añadir una lista");
+	textArea.setAttribute("placeholder",">>Añadir una lista<<");
 	textArea.setAttribute("id","fresh-list");
+	textArea.setAttribute("class", "bigbox");
 	textArea.classList.add("text");
 	inputContainer.appendChild(textArea);
 
@@ -44,8 +45,9 @@ function tarjetas(){
 	var textArea = document.createElement("textarea");
 	enlace.remove(inputContainer);
 
-	textArea.setAttribute("placeholder", "Escribe tu tarea aquí");
-	textArea.setAttribute("id", "tareas")
+	textArea.setAttribute("placeholder", ">>Escribe tu tarea aquí<<");
+	textArea.setAttribute("id", "tareas");
+	textArea.setAttribute("class", "bigbox");
 	var container = document.getElementById("input-box")
 	container.appendChild(textArea);
 
