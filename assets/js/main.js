@@ -48,16 +48,25 @@ function tarjetas(){
 	var container = document.getElementById("input-box")
 	container.appendChild(textArea);
 
-	var boton= document.createElement("button");
-	boton.setAttribute("id","boton-guardar");
+	var button= document.createElement("button");
+	button.setAttribute("id","boton-guardar");
 	var buttonContainer = document.getElementById("button-area");
-	
-	var button = document.createElement("button");
 
-	button.setAttribute("id","boton");
-	button.setAttribute("name", "guardar");
-	button.innerHTML = "Guardar";
+	button.setAttribute("id","boton-tarjeta");
+	button.setAttribute("name", "Añadir");
+	button.innerHTML = "Añadir";
 	buttonContainer.appendChild(button);
+
+	document.getElementById("boton-tarjeta").addEventListener("click",imprimir);
+}
+
+function imprimir(){
+	var text =textArea.value;//rescato el valor de mi txtarea
+	var contienelista= document.getElementById("box");	
+	var listado=document.createElement("li");
+	var lista= document.createTextNode(text);//tambien para pasar un texto
+	listado.appendChild(lista);
+	contienelista.appendChild(listado);
 }
 
 
@@ -65,7 +74,7 @@ function tarjetas(){
 
 
 
-/*/es fijo debiese estar en html, pero whatevs, textarea desde js
+es fijo debiese estar en html, pero whatevs, textarea desde js
 var container= document.getElementById("boxdos");
 var textArea=document.createElement("textarea");
 //luego tengo que indicarle dónde va
