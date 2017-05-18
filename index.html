@@ -4,18 +4,28 @@
 	<meta charset="UTF-8">
 	<title>Trello Rip Off</title>
 	<link rel="stylesheet" href="assets/css/main.css">
-</head>
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|PT+Sans+Narrow:400,700" rel="stylesheet">
+	<link rel="icon"
+      type="image/ico"
+      href="img/favicon.ico">
+
+
+</head >
 	<body>
 		<section class = "addToDo">
 			<header id= "header">Trello</header>
-			<div id="nombre-lista"></div>
-			<hr>
-			<div id="input-box" class="first-container">
-            <label for="name" class="sr-only"></label>
-            <input onclick="borrar()" type="text" id="input-lista" class="box"
-            placeholder= "Añadir una lista">
-          </div>
-          <div id="button-area" class="button-container"></div>
+			<section id = "cuerpo">
+				<div id="nombre-lista"></div>
+				<hr>
+				<div id="input-box" class="first-container">
+            	<label for="name" class="sr-only"></label>
+            	<input onclick="borrar()" type="text" id="input-lista" class="box"
+            	placeholder= ">>Añadir una lista<<">
+          		</div>
+          		<div id="button-area" class="button-container"></div>
+          		<hr>
+          		<div id="print-area"></div>
+			</section>
 		</section>
 		<script type="text/javascript" src="assets/js/main.js"></script>
 	</body>
